@@ -584,7 +584,7 @@
         "storeOutMessages": true,
         "fwdInMessages": true,
         "templateScope": "local",
-        "x": 630,
+        "x": 370,
         "y": 1060,
         "wires": [
             []
@@ -599,12 +599,12 @@
         "order": 2,
         "width": "1",
         "height": "1",
-        "format": "<style>\n\n    body {\n        background-image: url(\"/CSS/Background.jpg\");\n        background-color: #cccccc;\n    }\n    \n    .md-toolbar-tools {\n        background-color: #333333;\n        height: 120px;\n    }\n    \n    #logo {  width: 84px; height: 84px; } \n    \n    #GUI_CSS { width: 0px; visibility: hidden; }\n    \n    #GUI_Status { height: 440px; }\n    \n    #GUI_Steuerung { height: 440px; }\n    \n    #GUI_Bildanalyse  { height: 440px; }\n    \n    #GUI_MQTT_Konsole { height: 440px; }\n    \n    .placeholderkamera {\n        width: 100%;\n        height: 400px;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-image: url('/CSS/placeholder_kamera.png');\n        overflow: hidden;\n    }\n    \n    .placeholderopencv {\n        width: 100%;\n        height: 390px;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-image: url('/CSS/placeholder_opencv.png');\n        overflow: hidden;\n    }\n    \n</style>",
+        "format": "<style>\n\n    body {\n        background-image: url(\"/CSS/Background.jpg\");\n        background-color: #cccccc;\n    }\n    \n    .md-toolbar-tools {\n        background-color: #333333;\n        height: 120px;\n    }\n    \n    #logo {  width: 84px; height: 84px; } \n    \n    #GUI_CSS { width: 0px; visibility: hidden; }\n    \n    #GUI_Status { height: 440px; }\n    \n    #GUI_Steuerung { height: 440px; }\n    \n    #GUI_Bildanalyse  { height: 440px; }\n    \n    #GUI_MQTT_Konsole { height: 440px; }\n    \n</style>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "templateScope": "local",
         "x": 170,
-        "y": 140,
+        "y": 360,
         "wires": [
             []
         ]
@@ -623,7 +623,7 @@
         "fwdInMessages": true,
         "templateScope": "global",
         "x": 170,
-        "y": 100,
+        "y": 320,
         "wires": [
             []
         ]
@@ -643,8 +643,8 @@
         "color": "",
         "bgcolor": "",
         "icon": "fa-play",
-        "payload": "",
-        "payloadType": "str",
+        "payload": "{\"mode\":\"start\"}",
+        "payloadType": "json",
         "topic": "",
         "x": 650,
         "y": 560,
@@ -655,7 +655,7 @@
                 "8eefa527.c95678",
                 "a5e4ec57.43af1",
                 "b0fe57af.9f7458",
-                "baac8940.1726d8"
+                "36a75eab.b6ed52"
             ]
         ]
     },
@@ -674,8 +674,8 @@
         "color": "",
         "bgcolor": "red",
         "icon": "fa-stop",
-        "payload": "",
-        "payloadType": "str",
+        "payload": "{\"mode\":\"stop\"}",
+        "payloadType": "json",
         "topic": "",
         "x": 650,
         "y": 880,
@@ -707,7 +707,7 @@
         "cancel": "Nein",
         "topic": "Wollen Sie das Programm unwiederruflich stoppen?",
         "name": "Bestätigung",
-        "x": 880,
+        "x": 890,
         "y": 880,
         "wires": [
             [
@@ -715,7 +715,7 @@
                 "bbb29d4.675796",
                 "b8a764ef.1a4a08",
                 "748a65a0.2a026c",
-                "317d6075.a28a8"
+                "7962fa2e.73a5a4"
             ]
         ]
     },
@@ -734,15 +734,16 @@
         "color": "",
         "bgcolor": "#d8b94b",
         "icon": "fa-pause",
-        "payload": "",
-        "payloadType": "str",
+        "payload": "{\"mode\":\"pause\"}",
+        "payloadType": "json",
         "topic": "",
         "x": 620,
         "y": 700,
         "wires": [
             [
                 "363705dd.195f0a",
-                "b8a764ef.1a4a08"
+                "b8a764ef.1a4a08",
+                "7962fa2e.73a5a4"
             ]
         ]
     },
@@ -752,8 +753,8 @@
         "z": "74e6a011.54203",
         "name": "Analyse",
         "info": "",
-        "x": 490,
-        "y": 1180,
+        "x": 90,
+        "y": 1140,
         "wires": []
     },
     {
@@ -763,7 +764,7 @@
         "name": "CSS Attribute",
         "info": "",
         "x": 110,
-        "y": 40,
+        "y": 260,
         "wires": []
     },
     {
@@ -773,14 +774,14 @@
         "group": "7f62e048.1f172",
         "name": "Foto: Vergleich",
         "order": 4,
-        "width": "3",
-        "height": "4",
-        "format": "<style>\n    #placeholder1 {\n        width: 100%;\n        height: 270px;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-image: url('/Pictures/compare.jpg?{{msg.payload}}');\n    }\n</style>\n\n<div class=\"placeholderkamera\">\n    <div id=\"placeholder1\"></div>\n</div>",
+        "width": "4",
+        "height": "3",
+        "format": "<style>\n   .placeholdercompare {\n        width: 100%;\n        height: 270px;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-image: url('/CSS/placeholder_compare.png');\n        overflow: hidden;\n    }\n    \n    #placeholder1 {\n        width: 100%;\n        height: 270px;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-image: url('/Pictures/compare.jpg?{{msg.payload}}');\n    }\n</style>\n\n<br>\n<div class=\"placeholdercompare\">\n    <div id=\"placeholder1\"></div>\n</div>",
         "storeOutMessages": false,
         "fwdInMessages": true,
         "templateScope": "local",
         "x": 540,
-        "y": 1340,
+        "y": 1260,
         "wires": [
             []
         ]
@@ -799,7 +800,7 @@
         "fwdInMessages": true,
         "templateScope": "local",
         "x": 170,
-        "y": 180,
+        "y": 400,
         "wires": [
             []
         ]
@@ -811,14 +812,14 @@
         "group": "7f62e048.1f172",
         "name": "Foto: Unterschied",
         "order": 5,
-        "width": "5",
-        "height": "3",
-        "format": "<style>\n    #placeholder2 {\n        width: 100%;\n        height: 270px;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-image: url('/Pictures/difference.jpg?{{msg.payload}}');\n    }\n</style>\n\n<div class=\"placeholderopencv\">\n    <div id=\"placeholder2\"></div>\n</div>",
+        "width": "8",
+        "height": "5",
+        "format": "<style>\n    .placeholderopencv {\n        width: 100%;\n        height: 270px;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-image: url('/CSS/placeholder_opencv.png');\n        overflow: hidden;\n    }\n    \n    #placeholder2 {\n        width: 100%;\n        height: 270px;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-image: url('/Pictures/difference.jpg?{{msg.payload}}');\n    }\n</style>\n\n<div class=\"placeholderopencv\">\n    <div id=\"placeholder2\"></div>\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "templateScope": "local",
         "x": 550,
-        "y": 1380,
+        "y": 1300,
         "wires": [
             []
         ]
@@ -833,19 +834,19 @@
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "Stein hinzufügen",
+        "label": "Stein hinzuf&uuml;gen",
         "tooltip": "einen weiteren Stein nachschicken",
         "color": "",
         "bgcolor": "",
         "icon": "fa-plus",
-        "payload": "",
-        "payloadType": "str",
+        "payload": "{\"mode\":\"resume\"}",
+        "payloadType": "json",
         "topic": "",
-        "x": 650,
+        "x": 660,
         "y": 920,
         "wires": [
             [
-                "873ce984.9a8d38"
+                "7962fa2e.73a5a4"
             ]
         ]
     },
@@ -863,7 +864,7 @@
         "fwdInMessages": true,
         "templateScope": "local",
         "x": 180,
-        "y": 220,
+        "y": 440,
         "wires": [
             []
         ]
@@ -910,8 +911,8 @@
         "color": "",
         "bgcolor": "",
         "icon": "fa-play",
-        "payload": "",
-        "payloadType": "str",
+        "payload": "{\"mode\":\"resume\"}",
+        "payloadType": "json",
         "topic": "",
         "x": 630,
         "y": 780,
@@ -919,7 +920,7 @@
             [
                 "f9f97e67.0b157",
                 "a5e4ec57.43af1",
-                "1eadd552.b9616b"
+                "7962fa2e.73a5a4"
             ]
         ]
     },
@@ -1167,73 +1168,20 @@
         ]
     },
     {
-        "id": "c42aa88b.dc2cb8",
-        "type": "inject",
-        "z": "74e6a011.54203",
-        "name": "",
-        "topic": "",
-        "payload": "{\"mode\":\"calibrate\"}",
-        "payloadType": "json",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 850,
-        "y": 1220,
-        "wires": [
-            [
-                "d7c2c3cd.59e8b"
-            ]
-        ]
-    },
-    {
-        "id": "d7c2c3cd.59e8b",
-        "type": "mqtt out",
-        "z": "74e6a011.54203",
-        "name": "",
-        "topic": "pdp/kamera",
-        "qos": "",
-        "retain": "",
-        "broker": "a47963d9.93a13",
-        "x": 1140,
-        "y": 1240,
-        "wires": []
-    },
-    {
-        "id": "81cb2524.c4c418",
-        "type": "inject",
-        "z": "74e6a011.54203",
-        "name": "",
-        "topic": "",
-        "payload": "{\"mode\":\"compare\"}",
-        "payloadType": "json",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 850,
-        "y": 1280,
-        "wires": [
-            [
-                "d7c2c3cd.59e8b"
-            ]
-        ]
-    },
-    {
         "id": "531ac80a.d2f0b8",
         "type": "ui_template",
         "z": "74e6a011.54203",
         "group": "7f62e048.1f172",
         "name": "Foto: Kalibrierbild",
         "order": 2,
-        "width": "8",
-        "height": "6",
-        "format": "<style>\n    #placeholder3 {\n        width: 100%;\n        height: 400px;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-image: url('/Pictures/calibrate.jpg?{{msg.payload}}');\n    }\n</style>\n\n<div class=\"placeholderkamera\">\n    <div id=\"placeholder3\"></div>\n</div>",
+        "width": "4",
+        "height": "3",
+        "format": "<style>\n   .placeholderkamera {\n        width: 100%;\n        height: 400px;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-image: url('/CSS/placeholder_kamera.png');\n        overflow: hidden;\n    }\n    \n    #placeholder3 {\n        width: 100%;\n        height: 400px;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-image: url('/Pictures/calibrate.jpg?{{msg.payload}}');\n    }\n</style>\n\n<div class=\"placeholderkamera\">\n    <div id=\"placeholder3\"></div>\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "templateScope": "local",
         "x": 550,
-        "y": 1260,
+        "y": 1220,
         "wires": [
             []
         ]
@@ -1247,11 +1195,11 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Uebereinstimmung: ",
+        "label": "Bef&uuml;llungsgrad",
         "format": "{{msg.payload}} %",
         "layout": "row-spread",
-        "x": 550,
-        "y": 1420,
+        "x": 420,
+        "y": 1340,
         "wires": []
     },
     {
@@ -1259,12 +1207,12 @@
         "type": "mqtt in",
         "z": "74e6a011.54203",
         "name": "",
-        "topic": "pdp/score",
+        "topic": "pdp/load",
         "qos": "2",
         "datatype": "auto",
         "broker": "a47963d9.93a13",
         "x": 140,
-        "y": 1420,
+        "y": 1280,
         "wires": [
             [
                 "2ae1a4f9.76365c",
@@ -1294,7 +1242,7 @@
         "to": "",
         "reg": false,
         "x": 370,
-        "y": 1380,
+        "y": 1300,
         "wires": [
             [
                 "e5928ad9.839c98"
@@ -1321,7 +1269,7 @@
         "to": "",
         "reg": false,
         "x": 370,
-        "y": 1340,
+        "y": 1260,
         "wires": [
             [
                 "abdfbd0.187a64"
@@ -1348,51 +1296,12 @@
         "to": "",
         "reg": false,
         "x": 370,
-        "y": 1260,
+        "y": 1220,
         "wires": [
             [
                 "531ac80a.d2f0b8"
             ]
         ]
-    },
-    {
-        "id": "317d6075.a28a8",
-        "type": "mqtt out",
-        "z": "74e6a011.54203",
-        "name": "",
-        "topic": "pdp/control",
-        "qos": "",
-        "retain": "",
-        "broker": "a47963d9.93a13",
-        "x": 1090,
-        "y": 880,
-        "wires": []
-    },
-    {
-        "id": "873ce984.9a8d38",
-        "type": "mqtt out",
-        "z": "74e6a011.54203",
-        "name": "",
-        "topic": "pdp/control",
-        "qos": "",
-        "retain": "",
-        "broker": "a47963d9.93a13",
-        "x": 1090,
-        "y": 920,
-        "wires": []
-    },
-    {
-        "id": "1eadd552.b9616b",
-        "type": "mqtt out",
-        "z": "74e6a011.54203",
-        "name": "",
-        "topic": "pdp/control",
-        "qos": "",
-        "retain": "",
-        "broker": "a47963d9.93a13",
-        "x": 1090,
-        "y": 780,
-        "wires": []
     },
     {
         "id": "f570a662.147c38",
@@ -1404,7 +1313,8 @@
             [
                 "6ced7490.5f633c",
                 "b8a764ef.1a4a08",
-                "a5e4ec57.43af1"
+                "a5e4ec57.43af1",
+                "bbb29d4.675796"
             ]
         ]
     },
@@ -1549,6 +1459,106 @@
         "wires": [
             [
                 "949cc1b2.7a44d"
+            ]
+        ]
+    },
+    {
+        "id": "2edf8de1.288222",
+        "type": "mqtt in",
+        "z": "74e6a011.54203",
+        "name": "",
+        "topic": "pdp/finished",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "a47963d9.93a13",
+        "x": 130,
+        "y": 660,
+        "wires": [
+            [
+                "276e384d.89e3f8",
+                "bbb29d4.675796",
+                "b8a764ef.1a4a08",
+                "a5e4ec57.43af1",
+                "6ced7490.5f633c",
+                "748a65a0.2a026c"
+            ]
+        ]
+    },
+    {
+        "id": "276e384d.89e3f8",
+        "type": "ui_toast",
+        "z": "74e6a011.54203",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "topic": "Programm abgeschlossen",
+        "name": "finished",
+        "x": 880,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7962fa2e.73a5a4",
+        "type": "mqtt out",
+        "z": "74e6a011.54203",
+        "name": "",
+        "topic": "pdp/prg",
+        "qos": "",
+        "retain": "",
+        "broker": "a47963d9.93a13",
+        "x": 1340,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "36a75eab.b6ed52",
+        "type": "ui_toast",
+        "z": "74e6a011.54203",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "topic": "Bitte stellen Sie sicher, dass sich keine Steine im Behälter befinden.",
+        "name": "Bestätigung",
+        "x": 890,
+        "y": 560,
+        "wires": [
+            [
+                "1a19ce93.8d5fd1"
+            ]
+        ]
+    },
+    {
+        "id": "1a19ce93.8d5fd1",
+        "type": "change",
+        "z": "74e6a011.54203",
+        "name": "start",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"mode\":\"start\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1070,
+        "y": 560,
+        "wires": [
+            [
+                "7962fa2e.73a5a4"
             ]
         ]
     }
