@@ -1,575 +1,10 @@
 [
     {
-        "id": "584a5882.235cf8",
-        "type": "tab",
-        "label": "MQTT Konsole",
-        "disabled": true,
-        "info": ""
-    },
-    {
         "id": "74e6a011.54203",
         "type": "tab",
         "label": "GUI",
         "disabled": false,
         "info": ""
-    },
-    {
-        "id": "75005012.d5d68",
-        "type": "tab",
-        "label": "Status",
-        "disabled": true,
-        "info": ""
-    },
-    {
-        "id": "e8dd3d9d.43313",
-        "type": "subflow",
-        "name": "Subflow 1",
-        "info": "",
-        "in": [],
-        "out": []
-    },
-    {
-        "id": "d23060fe.99aa1",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-dark",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#400040",
-                "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "reset": false
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#097479",
-                    "value": "#097479",
-                    "edited": true
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#097479",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#000000",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#0eb8c0",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#555555",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#333333",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#eeeeee",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#097479",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#333333",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "Arial Black,Arial Black,Gadget,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey"
-            }
-        },
-        "site": {
-            "name": "PDP Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
-        "id": "eb26bc07.ee25f",
-        "type": "mqtt-broker",
-        "z": "",
-        "name": "pdp",
-        "broker": "localhost",
-        "port": "1883",
-        "clientid": "",
-        "usetls": false,
-        "compatmode": true,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": ""
-    },
-    {
-        "id": "38d6543.82816ac",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "",
-        "order": 5,
-        "width": "10",
-        "height": 1
-    },
-    {
-        "id": "becb974a.cf45c8",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-dark",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "reset": false
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#097479",
-                    "value": "#097479",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#097479",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#000000",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#0eb8c0",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#555555",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#333333",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#eeeeee",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#097479",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#333333",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey"
-            }
-        },
-        "site": {
-            "name": "The Shaker Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 46,
-                "sy": 42,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
-        "id": "e2666467.aced58",
-        "type": "ui_tab",
-        "z": "",
-        "name": "GUI",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "7f62e048.1f172",
-        "type": "ui_group",
-        "z": "",
-        "name": "Bildanalyse",
-        "tab": "e2666467.aced58",
-        "order": 4,
-        "disp": false,
-        "width": "8",
-        "collapse": false
-    },
-    {
-        "id": "2442d3f.7f8ad2c",
-        "type": "ui_group",
-        "z": "",
-        "name": "Steuerung",
-        "tab": "e2666467.aced58",
-        "order": 3,
-        "disp": false,
-        "width": "7",
-        "collapse": false
-    },
-    {
-        "id": "46be9677.ea0c98",
-        "type": "ui_group",
-        "z": "",
-        "name": "Status",
-        "tab": "e2666467.aced58",
-        "order": 2,
-        "disp": true,
-        "width": "10",
-        "collapse": false
-    },
-    {
-        "id": "141380a2.be1f7f",
-        "type": "ui_group",
-        "z": "",
-        "name": "CSS",
-        "tab": "e2666467.aced58",
-        "order": 1,
-        "disp": false,
-        "width": "2",
-        "collapse": false
-    },
-    {
-        "id": "a47963d9.93a13",
-        "type": "mqtt-broker",
-        "z": "",
-        "name": "Raspi",
-        "broker": "localhost",
-        "port": "1883",
-        "clientid": "",
-        "usetls": false,
-        "compatmode": true,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": ""
-    },
-    {
-        "id": "69eca71c.d8e1b8",
-        "type": "ui_group",
-        "z": "",
-        "name": "MQTT Konsole",
-        "tab": "e2666467.aced58",
-        "order": 5,
-        "disp": true,
-        "width": "10",
-        "collapse": false
-    },
-    {
-        "id": "44141e85.29e28",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-dark",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "reset": false
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#097479",
-                    "value": "#097479",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#097479",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#000000",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#0eb8c0",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#555555",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#333333",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#eeeeee",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#097479",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#333333",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey"
-            }
-        },
-        "site": {
-            "name": "The Shaker Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 46,
-                "sy": 42,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
-        "id": "306949f1.d7a786",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "",
-        "order": 6,
-        "width": "10",
-        "height": "3"
-    },
-    {
-        "id": "f63fe74c.2dc498",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "",
-        "order": 1,
-        "width": "10",
-        "height": 1
-    },
-    {
-        "id": "ac9119a.34ef4e8",
-        "type": "mqtt-broker",
-        "z": "",
-        "name": "Raspi",
-        "broker": "localhost",
-        "port": "1883",
-        "clientid": "",
-        "usetls": false,
-        "compatmode": true,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": ""
-    },
-    {
-        "id": "c516c76f.5e5e78",
-        "type": "mqtt in",
-        "z": "584a5882.235cf8",
-        "name": "",
-        "topic": "pdp/#",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "eb26bc07.ee25f",
-        "x": 190,
-        "y": 200,
-        "wires": [
-            [
-                "e81d1352.62611",
-                "d02085fa.866e68"
-            ]
-        ]
-    },
-    {
-        "id": "e81d1352.62611",
-        "type": "debug",
-        "z": "584a5882.235cf8",
-        "name": "MQTT # RAW",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 800,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "d02085fa.866e68",
-        "type": "function",
-        "z": "584a5882.235cf8",
-        "name": "Store and shift msg",
-        "func": "\n\n\n// initialise the counter to 0 if it doesn't exist already\nvar text = context.get('text')|| [];\n\ntext.push(msg);\nif (text.length > 20){\n    text.shift();\n    text.length = 20;\n} \n\n// store the value back\ncontext.set('text',text);\n// make it part of the outgoing msg object\nmsg = {};\nmsg.payload = text;\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 470,
-        "y": 260,
-        "wires": [
-            [
-                "495c82e3.78b43c",
-                "7d8af9ca.6fd9f8"
-            ]
-        ]
-    },
-    {
-        "id": "495c82e3.78b43c",
-        "type": "debug",
-        "z": "584a5882.235cf8",
-        "name": "mqtt array",
-        "active": false,
-        "console": "false",
-        "complete": "payload",
-        "x": 780,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "7d8af9ca.6fd9f8",
-        "type": "ui_template",
-        "z": "584a5882.235cf8",
-        "group": "69eca71c.d8e1b8",
-        "name": "MQTT Output",
-        "order": 1,
-        "width": "10",
-        "height": "17",
-        "format": "<div style=\"overflow-x:hidden;overflow-y:auto;transform:rotate(180deg);direction:rtl;text-align:left\">\n<ul style=\"overflow:hidden;transform:rotate(180deg); word-break: break-word;\">\n <li style=\"display:inline;\" ng-repeat=\"x in msg.payload\">\n <font color=\"red\" style=\"font-family:lucida console;font-size:10px;\">{{x.topic}}</font>\n    <ul>\n        <p style=\"font-family:lucida console;font-size:9px;display:inline;\">{{x.payload}}</p>\n    </ul>\n </li>\n</ul>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "templateScope": "local",
-        "x": 800,
-        "y": 260,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "29a6a0cd.db619",
-        "type": "comment",
-        "z": "584a5882.235cf8",
-        "name": "MQTT Konsole",
-        "info": "This flow demonstrates how to view MQTT data\n\nIt is also a nice demonstration how you can\nuse an array to shift data into the UI template\n\n\nUI Viewable:\nhttp://localhost:1880/ui\n\nWritten by\nCory Guynn\n2016\nwww.InternetOfLEG0.com",
-        "x": 120,
-        "y": 80,
-        "wires": []
     },
     {
         "id": "319b59f8.ec5c76",
@@ -1319,150 +754,6 @@
         ]
     },
     {
-        "id": "ef5ead81.5e018",
-        "type": "comment",
-        "z": "75005012.d5d68",
-        "name": "Status:",
-        "info": "",
-        "x": 350,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "defb7cd6.dca83",
-        "type": "ui_chart",
-        "z": "75005012.d5d68",
-        "name": "",
-        "group": "46be9677.ea0c98",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "label": "Steine pro Minute",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "0",
-        "ymax": "10",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "useOldStyle": false,
-        "outputs": 1,
-        "x": 470,
-        "y": 220,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9360eb45.f6e4f8",
-        "type": "ui_gauge",
-        "z": "75005012.d5d68",
-        "name": "",
-        "group": "46be9677.ea0c98",
-        "order": 3,
-        "width": "10",
-        "height": "5",
-        "gtype": "gage",
-        "title": "Befüllungsstand:",
-        "label": "%",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 470,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "949cc1b2.7a44d",
-        "type": "ui_text",
-        "z": "75005012.d5d68",
-        "group": "46be9677.ea0c98",
-        "order": 1,
-        "width": "10",
-        "height": "1",
-        "name": "",
-        "label": "Status: ",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 440,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "3eba809.2b1698",
-        "type": "ui_text",
-        "z": "75005012.d5d68",
-        "group": "46be9677.ea0c98",
-        "order": 2,
-        "width": "10",
-        "height": "1",
-        "name": "",
-        "label": "Status: ",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 440,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "c84226be.a1c748",
-        "type": "mqtt in",
-        "z": "75005012.d5d68",
-        "name": "",
-        "topic": "pdp/load",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "a47963d9.93a13",
-        "x": 140,
-        "y": 180,
-        "wires": [
-            [
-                "9360eb45.f6e4f8"
-            ]
-        ]
-    },
-    {
-        "id": "d1c63e35.0de48",
-        "type": "mqtt in",
-        "z": "75005012.d5d68",
-        "name": "",
-        "topic": "pdp/status",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "a47963d9.93a13",
-        "x": 140,
-        "y": 100,
-        "wires": [
-            [
-                "949cc1b2.7a44d"
-            ]
-        ]
-    },
-    {
         "id": "2edf8de1.288222",
         "type": "mqtt in",
         "z": "74e6a011.54203",
@@ -1524,14 +815,14 @@
         "highlight": "",
         "outputs": 1,
         "ok": "OK",
-        "cancel": "",
+        "cancel": "Abbrechen",
         "topic": "Bitte stellen Sie sicher, dass sich keine Steine im Behälter befinden.",
         "name": "Bestätigung",
         "x": 890,
         "y": 560,
         "wires": [
             [
-                "1a19ce93.8d5fd1"
+                "4bc60c26.0a38d4"
             ]
         ]
     },
@@ -1554,12 +845,113 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1070,
+        "x": 1210,
         "y": 560,
         "wires": [
             [
                 "7962fa2e.73a5a4"
             ]
         ]
+    },
+    {
+        "id": "4bc60c26.0a38d4",
+        "type": "switch",
+        "z": "74e6a011.54203",
+        "name": "if",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "OK",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Abbrechen",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1050,
+        "y": 560,
+        "wires": [
+            [
+                "1a19ce93.8d5fd1"
+            ],
+            [
+                "bbb29d4.675796",
+                "b8a764ef.1a4a08",
+                "a5e4ec57.43af1",
+                "6ced7490.5f633c"
+            ]
+        ]
+    },
+    {
+        "id": "2442d3f.7f8ad2c",
+        "type": "ui_group",
+        "z": "",
+        "name": "Steuerung",
+        "tab": "e2666467.aced58",
+        "order": 3,
+        "disp": false,
+        "width": "7",
+        "collapse": false
+    },
+    {
+        "id": "141380a2.be1f7f",
+        "type": "ui_group",
+        "z": "",
+        "name": "CSS",
+        "tab": "e2666467.aced58",
+        "order": 1,
+        "disp": false,
+        "width": "2",
+        "collapse": false
+    },
+    {
+        "id": "7f62e048.1f172",
+        "type": "ui_group",
+        "z": "",
+        "name": "Bildanalyse",
+        "tab": "e2666467.aced58",
+        "order": 4,
+        "disp": false,
+        "width": "8",
+        "collapse": false
+    },
+    {
+        "id": "a47963d9.93a13",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "Raspi",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "e2666467.aced58",
+        "type": "ui_tab",
+        "z": "",
+        "name": "GUI",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
     }
 ]
