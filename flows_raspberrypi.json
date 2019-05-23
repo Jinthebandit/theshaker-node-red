@@ -7,6 +7,168 @@
         "info": ""
     },
     {
+        "id": "2442d3f.7f8ad2c",
+        "type": "ui_group",
+        "z": "",
+        "name": "Steuerung",
+        "tab": "e2666467.aced58",
+        "order": 3,
+        "disp": false,
+        "width": "7",
+        "collapse": false
+    },
+    {
+        "id": "141380a2.be1f7f",
+        "type": "ui_group",
+        "z": "",
+        "name": "CSS",
+        "tab": "e2666467.aced58",
+        "order": 1,
+        "disp": false,
+        "width": "2",
+        "collapse": false
+    },
+    {
+        "id": "7f62e048.1f172",
+        "type": "ui_group",
+        "z": "",
+        "name": "Bildanalyse",
+        "tab": "e2666467.aced58",
+        "order": 4,
+        "disp": false,
+        "width": "8",
+        "collapse": false
+    },
+    {
+        "id": "a47963d9.93a13",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "Raspi",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "e2666467.aced58",
+        "type": "ui_tab",
+        "z": "",
+        "name": "GUI",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c47150de.b0adc",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 46,
+                "sy": 46,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
         "id": "319b59f8.ec5c76",
         "type": "ui_template",
         "z": "74e6a011.54203",
@@ -888,70 +1050,5 @@
                 "6ced7490.5f633c"
             ]
         ]
-    },
-    {
-        "id": "2442d3f.7f8ad2c",
-        "type": "ui_group",
-        "z": "",
-        "name": "Steuerung",
-        "tab": "e2666467.aced58",
-        "order": 3,
-        "disp": false,
-        "width": "7",
-        "collapse": false
-    },
-    {
-        "id": "141380a2.be1f7f",
-        "type": "ui_group",
-        "z": "",
-        "name": "CSS",
-        "tab": "e2666467.aced58",
-        "order": 1,
-        "disp": false,
-        "width": "2",
-        "collapse": false
-    },
-    {
-        "id": "7f62e048.1f172",
-        "type": "ui_group",
-        "z": "",
-        "name": "Bildanalyse",
-        "tab": "e2666467.aced58",
-        "order": 4,
-        "disp": false,
-        "width": "8",
-        "collapse": false
-    },
-    {
-        "id": "a47963d9.93a13",
-        "type": "mqtt-broker",
-        "z": "",
-        "name": "Raspi",
-        "broker": "localhost",
-        "port": "1883",
-        "clientid": "",
-        "usetls": false,
-        "compatmode": true,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": ""
-    },
-    {
-        "id": "e2666467.aced58",
-        "type": "ui_tab",
-        "z": "",
-        "name": "GUI",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
     }
 ]
